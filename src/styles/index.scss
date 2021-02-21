@@ -1,0 +1,41 @@
+$white: #ffffff;
+$primary: #01af7a;
+$primary-darken: #007268;
+$dark: #020202;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: $white;
+  color: $dark;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.header {
+  margin-bottom: 1.75rem;
+  text-align: center;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+}
