@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import { useActions } from "../hooks/useActions";
 import { useTypedSelector } from "../hooks/useTypedSelector";
+import Failed from "./Failed";
 import Loader from "./Loader";
 
 const App: React.FC = () => {
@@ -14,7 +15,7 @@ const App: React.FC = () => {
   if (loading) {
     return <Loader />
   } else if (error) {
-    return <h1>Error</h1>
+    return <Failed />
   }
 
 

@@ -1,0 +1,25 @@
+.failed {
+  $_: ".failed";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+  &__icon {
+    height: 4.75rem;
+    width: 4.75rem;
+    animation: shadow 1s infinite alternate;
+  }
+}
+
+@keyframes shadow {
+  0% {
+    transform: rotate(-20deg);
+    transition: transform 1s;
+  }
+  100% {
+    transform: rotate(20deg);
+    transition: transform 1s;
+  }
+}
