@@ -9,13 +9,15 @@ export const fetchCurrencies = () => {
       const response = await axios.get(
         `${process.env.REACT_APP_HOST}latest?access_key=${process.env.REACT_APP_API_KEY}&symbols=USD,AUD,CAD,PLN,MXN`
       );
-      dispatch({
-        type: DataActionType.FETCH_CURRENCY_SUCCESS,
-        payload: Object.keys(response.data.rates).map((item) => ({
-          label: item,
-          value: response.data.rates[item],
-        })),
-      });
+      setTimeout(() => {
+        dispatch({
+          type: DataActionType.FETCH_CURRENCY_SUCCESS,
+          payload: Object.keys(response.data.rates).map((item) => ({
+            label: item,
+            value: response.data.rates[item],
+          })),
+        });
+      }, 1000);
     } catch (e) {
       dispatch({ type: DataActionType.FETCH_CURRENCY_FAILED, payload: "404" });
     }

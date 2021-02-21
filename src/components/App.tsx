@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import { useActions } from "../hooks/useActions";
 import { useTypedSelector } from "../hooks/useTypedSelector";
+import Loader from "./Loader";
 
 const App: React.FC = () => {
   const { fetchCurrencies } = useActions()
@@ -11,7 +12,7 @@ const App: React.FC = () => {
   }, [])
 
   if (loading) {
-    return <h1>Loading</h1>
+    return <Loader />
   } else if (error) {
     return <h1>Error</h1>
   }
